@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/aa0987a4cd.js" crossorigin="anonymous"></script>
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="Wolkfine crop.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <title>Wolkfine Technologies</title>
+    <script src="https://unpkg.com/ityped@0.0.10"></script>
+
+</head>
+
+<body>
+
+    <!--==================== whatsapp icon ====================-->
+    <a class="wtsp" href="https://wa.me/+917356178178" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <img src="Wolkfine Letter.png" style="width: 50%;">
+               
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#solutions" class="nav__link">Solutions</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_pwohahvd.json" style="width: 100%;"
+                    background="transparent" speed="1" class="home__img" loop autoplay></lottie-player>
+
+                <div class="home__data">
+                    <div class="smallhead">
+                        <p>A Complete Internet Solution</p>
+                    </div>
+                    <h1 class="home__title">
+
+                        Build Your
+                        <a href="" class="typewrite" style="color:rgb(122, 63, 243);" data-period="2000"
+                            data-type='[ "Websites", "Applications", "Logos", " Posters" ]'>
+                            <span class="wrap"></span>
+                        </a><br>
+                        In Record Time.
+                    </h1>
+                    <p class="home__description">
+                        Wolkfine Technologies founded to deliver best technology services to the world.
+                    </p>
+                    <a href="#contact" class="button button--flex">
+                        Get In Touch <i class="fas fa-hand-pointer"></i>
+                    </a>
+                    <script>
+                        var TxtType = function (el, toRotate, period) {
+                            this.toRotate = toRotate;
+                            this.el = el;
+                            this.loopNum = 0;
+                            this.period = parseInt(period, 10) || 2000;
+                            this.txt = '';
+                            this.tick();
+                            this.isDeleting = false;
+                        };
+
+                        TxtType.prototype.tick = function () {
+                            var i = this.loopNum % this.toRotate.length;
+                            var fullTxt = this.toRotate[i];
+
+                            if (this.isDeleting) {
+                                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                            } else {
+                                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                            }
+
+                            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+                            var that = this;
+                            var delta = 200 - Math.random() * 100;
+
+                            if (this.isDeleting) { delta /= 2; }
+
+                            if (!this.isDeleting && this.txt === fullTxt) {
+                                delta = this.period;
+                                this.isDeleting = true;
+                            } else if (this.isDeleting && this.txt === '') {
+                                this.isDeleting = false;
+                                this.loopNum++;
+                                delta = 500;
+                            }
+
+                            setTimeout(function () {
+                                that.tick();
+                            }, delta);
+                        };
+
+                        window.onload = function () {
+                            var elements = document.getElementsByClassName('typewrite');
+                            for (var i = 0; i < elements.length; i++) {
+                                var toRotate = elements[i].getAttribute('data-type');
+                                var period = elements[i].getAttribute('data-period');
+                                if (toRotate) {
+                                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                                }
+                            }
+                            // INJECT CSS
+                            var css = document.createElement("style");
+                            css.type = "text/css";
+                            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+                            document.body.appendChild(css);
+                        };
+                    </script>
+                </div>
+
+
+
+                <div class="home__social">
+                    <span class="home__social-follow">Follow Us</span>
+
+                    <div class="home__social-links">
+                        <a href="https://www.facebook.com/wolkfine" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/wolkfine/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://twitter.com/wolkfine" target="_blank" class="home__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container grid">
+                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_4wvirp3e.json"
+                    background="transparent" speed="1" loop autoplay></lottie-player>
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Who we really are & <br> why choose us
+                    </h2>
+
+                    <p class="about__description">
+                        Wolkfine Technologies is an authorised partner
+                        of Zoho finance products. At wolkfine,
+                        we craft powerful, personalised technological solutions
+                        for businesses of all sizes and specialities.
+                    </p>
+
+                    <div class="about__details">
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Technological Advancement
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Timeliness
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Partnership & ongoing support for the full life cycle of your program
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Stable & reliable solutions
+                        </p>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--==================== wedo ====================-->
+        <section class="wedo section container" id="products">
+            <h2 class="section__title-center">
+                We do
+            </h2>
+            <div class="wedo_cards">
+                <div class="wedo_cards_content">
+                    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_u7iy6fw9.json"
+                        background="transparent" speed="1" loop autoplay></lottie-player>
+                    <h3 style="text-align: center;">Idea</h3>
+                </div>
+
+                <div class="wedo_cards_content">
+                    <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_n2m0isqh.json"
+                        background="transparent" speed="1" loop autoplay></lottie-player>
+                    <h3 style="text-align: center;">Research</h3>
+                </div>
+
+                <div class="wedo_cards_content">
+                    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_n9cqez8k.json"
+                        background="transparent" speed="1" loop autoplay></lottie-player>
+                    <h3 style="text-align: center;">Design</h3>
+                </div>
+                <div class="wedo_cards_content">
+                    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_hrkmmhjf.json"
+                        background="transparent" speed="1" loop autoplay></lottie-player>
+                    <h3 style="text-align: center;">Development</h3>
+                </div>
+
+                <div class="wedo_cards_content">
+                    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_KWXaTR.json"
+                        background="transparent" speed="1" loop autoplay></lottie-player>
+                    <h3 style="text-align: center;">Test</h3>
+                </div>
+
+                <div class="wedo_cards_content">
+                    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_qIt5ZO.json"
+                        background="transparent" speed="1" loop autoplay></lottie-player>
+                    <h3 style="text-align: center;">Launch</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--==================== STEPS ====================-->
+        <section class="steps section container" id="services">
+            <div class="steps__bg">
+                <h2 class="section__title-center steps__title">
+                    Our Services
+                </h2>
+
+                <div class="steps__container grid">
+                    <div class="steps__card">
+                        <div class="steps__card-number">
+                            <img src="assets/img/responsive (1).png" style="width: 50px;">
+                        </div>
+                        <h4 class="steps__card-title">Web Development</h4>
+                        <p class="steps__card-description">
+                            We design and develop high-functioning business websites
+                            that perform and promote business growth and success
+                        </p>
+                    </div>
+                    <div class="steps__card">
+                        <div class="steps__card-number">
+                            <img src="assets/img/smartphone (1).png">
+                        </div>
+                        <h3 class="steps__card-title">Mobile App Development</h3>
+                        <p class="steps__card-description">
+                            We provide efficient custom mobile app development services,
+                            fueled by our deep industry knowledge and app development expertise
+                        </p>
+                    </div>
+                    <div class="steps__card">
+                        <div class="steps__card-number">
+                            <img src="assets/img/online-shop (1).png" style="width: 50px;">
+                        </div>
+                        <h3 class="steps__card-title">E-commerce Development</h3>
+                        <p class="steps__card-description">
+                            We at Wolkfine help out with e-commerce solutions to
+                            you where you get a platform to start a business for yourself.
+                            Whether to sell products or services, we customize a solution for you
+                        </p>
+                    </div>
+                    <div class="steps__card">
+                        <div class="steps__card-number">
+                            <img src="assets/img/social-marketing (1).png">
+                        </div>
+                        <h3 class="steps__card-title">Digital Marketing</h3>
+                        <p class="steps__card-description">
+                            In order to reach your audience, you need to be present
+                            where they do and that’s online. Our targeted digital marketing
+                            strategy utilizes the right tools and tactics to ensure your
+                            business is always where it needs to be.
+                        </p>
+                    </div>
+                    <div class="steps__card">
+                        <div class="steps__card-number">
+                            <img src="assets/img/computer (1).png">
+                        </div>
+                        <h3 class="steps__card-title">Corporate Branding</h3>
+                        <p class="steps__card-description">
+                            Well designed visual elements and materials
+                            brilliantly represent your brand, attract
+                            attention and deliver your message to your audience.
+                            We design your corporate Logo, Flyer/Brochure,
+                            Business Card Designs, Video/Animation/Illustration
+                        </p>
+                    </div>
+                    <div class="steps__card">
+                        <div class="steps__card-number">
+                            <img src="assets/img/zohonew.png" style="width: 58%; ">
+                        </div>
+                        <h3 class="steps__card-title">Zoho Authorised Partner</h3>
+                        <p class="steps__card-description">
+                            Wolkfine Technologies is the Authorised
+                            Partner of Zoho in Calicut, Kerala.
+                            We are the team you need to build and
+                            optimize your Zoho suite of applications.
+                            We are specialised in Zoho Finance and provide
+                            full customized support.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!--==================== solutions ====================-->
+        <section class="about section container" id="solutions">
+            <div class="about__container grid">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Business Consultation
+                    </h2>
+
+                    <p class="about__description">
+                        Wolkfine Technologies is the authorised
+                        partner of Zoho in Calicut, Kerala and
+                        we are an innovative web designing company.
+                    </p>
+                    <div class="smallhead" style="margin-top: -13px;">
+                        <p>But that’s not all we do.</p>
+                    </div><br>
+                    <div class="about__details">
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Start-up Mentoring
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Business Networking
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Investor Funding
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            HR Consultation
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            IT Management
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Business Risk Analysis
+                        </p>
+
+                    </div>
+
+
+
+                </div>
+                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_fclga8fl.json"
+                    background="transparent" speed="1" loop autoplay></lottie-player>
+
+            </div>
+        </section>
+        <!--==================== clients ====================-->
+        <section class="product section container" id="products">
+            <h2 class="section__title-center">
+                People Who Trusted Us
+            </h2>
+
+            <p class="product__description">
+                Wolkfine Technologies is perfectly the finest IT company in Kerala to design and develop any kind of
+                websites
+            </p>
+
+            <div class="slider" style="margin-top: 20px;">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="assets/img/client logos/icpt logo 1.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/aalim.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/Moreich 002.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/edusmartlogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/aalimlogo.jpg" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/digitize.png" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/icpt logo 1.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/aalim.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/Moreich 002.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/edusmartlogo.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/aalimlogo.jpg" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/client logos/digitize.png" alt="" />
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!--==================== QUESTIONS ====================-->
+        <section class="questions section" id="faqs">
+            <h2 class="section__title-center questions__title container">
+                Some common questions <br> were often asked
+            </h2>
+
+            <div class="questions__container container grid">
+                <div class="questions__group">
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                Do you redesign existing websites?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                We certainly can do! If you are looking for just content
+                                changes and graphic changes, then it’s good idea to redesign.
+                                But if your site in not hitting industry benchmarks
+                                (Site speed, mobile responsiveness, content architecture),
+                                then it’s a good time to go for a new site.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                How much does a website cost?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                It completely depends on what you need,
+                                minimum amount of time used to design and custom
+                                develop your project. Though our website projects
+                                generally start in the range of INR.25,000 for basic
+                                websites range upward depending on your unique needs
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                How soon can my website launch?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Launch date will depend on the complexity
+                                of your website. Our average period is 20-30 days for
+                                a basic business website. If you have a specific launch
+                                date in mind, our project manager will be happy to work
+                                with you in setting up a timeline to achieve it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="questions__group">
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                What kind of Businesses / clients do you work with?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                We work with a broad range of company types
+                                (Start-ups, SME, Large Corporations, Non-profit
+                                organizations, B2C and more) across many business
+                                industries (Technology, Food, Travel, Apparel,
+                                Health + Beauty, Arts, Fair trade and more)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                Are there any other costs for websites?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                If you host through us, there are hosting charges.
+                                We have a dedicated server and your websites will be
+                                hosted securely and with privacy. There are charges
+                                for domain if you are designing a new website.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                What is web hosting and can I purchase my domain?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Web hosting is required in order to get your website online.
+                                It is the space that you ‘rent’ which contains your web files
+                                and allows users to access your site. YES, you can purchase
+                                your domain (With your credit/ debit card and email id).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CONTACT ====================-->
+        <section class="contact section container" id="contact">
+            <div class="contact__container grid">
+                <div class="contact__box">
+                    <h2 class="section__title">
+                        Hello,<br> We’ve been expecting you.
+                    </h2>
+
+                    <div class="contact__data">
+                        <div class="contact__information">
+                            <h3 class="contact__subtitle">Call us for instant support</h3>
+                            <span class="contact__description">
+                                <i class="ri-phone-line contact__icon"></i>
+                                <a href="tel:+919744723826" target="blank"> +91 7356 178 178</a>
+                            </span>
+                        </div>
+
+                        <div class="contact__information">
+                            <h3 class="contact__subtitle">Write us by mail</h3>
+                            <span class="contact__description">
+                                <i class="ri-mail-line contact__icon"></i>
+                                <a href="mailto:mail@wolkfine.com" target="blank">mail@wolkfine.com</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="feedback.php" class="contact__form">
+                    <div class="contact__inputs">
+                        <div class="contact__content">
+                            <input type="text" placeholder=" " class="contact__input" name="author" id="author">
+                            <label for="author" class="contact__label">Name</label>
+                        </div>
+                        <div class="contact__content">
+                            <input type="email" placeholder=" " class="contact__input" name="email" id="email">
+                            <label for="email" class="contact__label">Email</label>
+                        </div>
+
+                        <div class="contact__content">
+                            <input type="text" placeholder=" " class="contact__input" pattern="[6-9]{1}[0-9]{9}"
+                                name="mob" id="mob">
+                            <label for="mob" class="contact__label">Phone Number</label>
+                        </div>
+
+                        <div class="contact__content contact__area">
+                            <textarea name="comment" id="comment" placeholder=" " class="contact__input"></textarea>
+                            <label for="comment" class="contact__label">Message</label>
+                        </div>
+                    </div>
+
+                    <button class="button button--flex" name="submit">
+                        Send Message
+                        <i class="ri-arrow-right-up-line button__icon"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+
+                    <img src="Wolkfine Letter.png" height="40px" width="200px">
+                </a><br>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/wolkfine" class="footer__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/wolkfine/" class="footer__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/wolkfine" class="footer__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/wolkfine/mycompany/" class="footer__social-link">
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+                </div>
+                <br>
+                <p style="font-size: var(--smaller-font-size);">&#169; 2021 Wolkfine Technologies</p>
+
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Our Address</h3>
+
+                <ul class="footer__data">
+                    <li class="footer__information">Mobile 10X, Govt. Cyber Park</li>
+                    <li class="footer__information">Calicut - 673016, Kerala, India</li>
+                    <li class="footer__information"> <a href="tel:+919744723826" style="color: var(--text-color);"
+                            target="blank"> +91 7356 178 178</a></li>
+
+                </ul>
+            </div>
+
+
+
+            <div class="footer__content">
+                <h3 class="footer__title">
+                    Our Partners
+                </h3>
+
+                <div class="footer__cards">
+                    <img src="assets/img/zoho-authorized-partner-logo.png" alt="" class="footer__card">&nbsp;&nbsp;
+
+                    <img src="assets/img/Vyapar (1).png" alt="" style="width:40px; cursor: pointer;">
+                </div>
+            </div>
+        </div>
+
+        <p class="footer__copy">Made with <i class="fas fa-heart" style="color:#BD1616;"></i>&nbsp;By Wolkfine
+            Technologies</p>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
